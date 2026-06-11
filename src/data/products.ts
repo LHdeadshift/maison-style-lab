@@ -1,6 +1,13 @@
+import imgW1 from "../assets/p-w1.jpg";
+import imgW2 from "../assets/p-w2.jpg";
 import imgW3 from "../assets/p-w3.jpg";
+import imgW4 from "../assets/p-w4.jpg";
 import imgW5 from "../assets/p-w5.jpg";
 import imgW6 from "../assets/p-w6.jpg";
+import imgW7 from "../assets/p-w7.jpg";
+import imgW8 from "../assets/p-w8.jpg";
+import imgW9 from "../assets/p-w9.jpg";
+import imgW10 from "../assets/p-w10.jpg";
 import imgW11 from "../assets/p-w11.jpg";
 import imgW12 from "../assets/p-w12.jpg";
 import imgB4 from "../assets/p-b4.jpg";
@@ -8,8 +15,13 @@ import imgB7 from "../assets/p-b7.jpg";
 import imgB9 from "../assets/p-b9.jpg";
 import imgB11 from "../assets/p-b11.jpg";
 import imgB12 from "../assets/p-b12.jpg";
+import imgA4 from "../assets/p-a4.jpg";
+import imgA5 from "../assets/p-a5.jpg";
 import imgA6 from "../assets/p-a6.jpg";
 import imgA7 from "../assets/p-a7.jpg";
+import imgA8 from "../assets/p-a8.jpg";
+import imgA9 from "../assets/p-a9.jpg";
+import imgA10 from "../assets/p-a10.jpg";
 import imgA11 from "../assets/p-a11.jpg";
 import imgA12 from "../assets/p-a12.jpg";
 import imgF1 from "../assets/p-f1.jpg";
@@ -39,16 +51,16 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  { id:"w1", name:"Submariner Homage", brand:"Oceanic Maison", category:"watches", style:["bold","classic"], occasion:["everyday","special event"], price:185000, priceRange:"80k+", image:"https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80", description:"Swiss automatic, ceramic bezel, 300m water resistance. The definitive diver." },
-  { id:"w2", name:"Slim Dress Watch No.4", brand:"Atelier Horlogé", category:"watches", style:["minimalist","classic"], occasion:["work","everyday"], price:42000, priceRange:"30k-80k", image:"https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800&q=80", description:"6.9mm ultra-thin, white lacquered dial, tan calf leather strap." },
+  { id:"w1", name:"Submariner Homage", brand:"Oceanic Maison", category:"watches", style:["bold","classic"], occasion:["everyday","special event"], price:185000, priceRange:"80k+", image:imgW1, description:"Swiss automatic, ceramic bezel, 300m water resistance. The definitive diver." },
+  { id:"w2", name:"Slim Dress Watch No.4", brand:"Atelier Horlogé", category:"watches", style:["minimalist","classic"], occasion:["work","everyday"], price:42000, priceRange:"30k-80k", image:imgW2, description:"6.9mm ultra-thin, white lacquered dial, tan calf leather strap." },
   { id:"w3", name:"Royal Chronograph", brand:"Majestic Geneva", category:"watches", style:["bold","classic"], occasion:["special event","work"], price:320000, priceRange:"80k+", image:imgW3, description:"Flyback chronograph, 18k gold case, blue sunray dial, exhibition caseback." },
-  { id:"w4", name:"Field Watch Heritage", brand:"Nomad Temps", category:"watches", style:["minimalist","bold"], occasion:["everyday"], price:8900, priceRange:"under-10k", image:"https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=800&q=80", description:"Canvas NATO strap, Arabic numeral dial, anti-reflective mineral crystal." },
+  { id:"w4", name:"Field Watch Heritage", brand:"Nomad Temps", category:"watches", style:["minimalist","bold"], occasion:["everyday"], price:8900, priceRange:"under-10k", image:imgW4, description:"Canvas NATO strap, Arabic numeral dial, anti-reflective mineral crystal." },
   { id:"w5", name:"Rose Perpetuelle", brand:"Lumière Paris", category:"watches", style:["romantic","classic"], occasion:["date night","special event"], price:275000, priceRange:"80k+", image:imgW5, description:"Rose gold case, blush mother-of-pearl dial, 11 brilliant-cut diamond indices." },
   { id:"w6", name:"Skeleton Noir", brand:"Obscura Watchworks", category:"watches", style:["bold"], occasion:["special event","date night"], price:145000, priceRange:"80k+", image:imgW6, description:"Black PVD case, fully skeletonised manual-wind movement, sapphire caseback." },
-  { id:"w7", name:"GMT Voyager II", brand:"Meridian Co.", category:"watches", style:["classic","minimalist"], occasion:["work","everyday"], price:92000, priceRange:"80k+", image:"https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=800&q=80", description:"Dual timezone display, bidirectional 24hr bezel, Super-LumiNova indices." },
-  { id:"w8", name:"Dress Moonphase", brand:"Celestine Horlogé", category:"watches", style:["romantic","minimalist"], occasion:["special event","date night"], price:68000, priceRange:"30k-80k", image:"https://images.unsplash.com/photo-1622434641406-a158123450f9?w=800&q=80", description:"Moonphase complication, midnight blue dial, hand-stitched ostrich strap." },
-  { id:"w9", name:"Titanium Diver Pro", brand:"Pelagic Instruments", category:"watches", style:["bold","minimalist"], occasion:["everyday"], price:55000, priceRange:"30k-80k", image:"https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?w=800&q=80", description:"Grade 5 titanium, 500m WR, helium escape valve, triple-safety clasp." },
-  { id:"w10", name:"Vintage Reissue 1968", brand:"Archival Watch Co.", category:"watches", style:["classic","romantic"], occasion:["everyday","date night"], price:38000, priceRange:"30k-80k", image:"https://images.unsplash.com/photo-1587925358603-c2eea5305bbc?w=800&q=80", description:"Faithful reissue of 1968 original, gilt dial, manual-wound caliber." },
+  { id:"w7", name:"GMT Voyager II", brand:"Meridian Co.", category:"watches", style:["classic","minimalist"], occasion:["work","everyday"], price:92000, priceRange:"80k+", image:imgW7, description:"Dual timezone display, bidirectional 24hr bezel, Super-LumiNova indices." },
+  { id:"w8", name:"Dress Moonphase", brand:"Celestine Horlogé", category:"watches", style:["romantic","minimalist"], occasion:["special event","date night"], price:68000, priceRange:"30k-80k", image:imgW8, description:"Moonphase complication, midnight blue dial, hand-stitched ostrich strap." },
+  { id:"w9", name:"Titanium Diver Pro", brand:"Pelagic Instruments", category:"watches", style:["bold","minimalist"], occasion:["everyday"], price:55000, priceRange:"30k-80k", image:imgW9, description:"Grade 5 titanium, 500m WR, helium escape valve, triple-safety clasp." },
+  { id:"w10", name:"Vintage Reissue 1968", brand:"Archival Watch Co.", category:"watches", style:["classic","romantic"], occasion:["everyday","date night"], price:38000, priceRange:"30k-80k", image:imgW10, description:"Faithful reissue of 1968 original, gilt dial, manual-wound caliber." },
   { id:"w11", name:"Sport Chronos Elite", brand:"Veloce Milano", category:"watches", style:["bold"], occasion:["everyday","work"], price:72000, priceRange:"30k-80k", image:imgW11, description:"Tachymeter bezel, pushers at 2 and 4, bi-compax chronograph layout." },
   { id:"w12", name:"Minimalist No.1", brand:"Blanc Studio", category:"watches", style:["minimalist"], occasion:["everyday","work"], price:18500, priceRange:"10k-30k", image:imgW12, description:"Brushed case, no-date dial, single-hand display. Distilled to its essence." },
 
@@ -81,13 +93,13 @@ export const products: Product[] = [
   { id:"a1", name:"Cashmere Long Coat", brand:"Sartoria Bianco", category:"apparel", style:["classic","minimalist"], occasion:["special event","work"], price:185000, priceRange:"80k+", image:"https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=800&q=80", description:"100% Scottish cashmere, floor-length, covered horn buttons, internal belt." },
   { id:"a2", name:"Bouclé Cropped Jacket", brand:"Atelier Rue", category:"apparel", style:["romantic","classic"], occasion:["special event","date night"], price:95000, priceRange:"80k+", image:"https://images.unsplash.com/photo-1520012218364-3dbe62c99bee?w=800&q=80", description:"Ivory French bouclé, cropped at hip, contrast grosgrain trim, gilt buttons." },
   { id:"a3", name:"Wool Crepe Blazer", brand:"Sartoria Bianco", category:"apparel", style:["classic","minimalist"], occasion:["work","special event"], price:68000, priceRange:"30k-80k", image:"https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80", description:"Italian double-faced wool crepe, single button, notched lapel, half-canvassed." },
-  { id:"a4", name:"Linen Oversized Blazer", brand:"Studio Neutre", category:"apparel", style:["minimalist"], occasion:["everyday","work"], price:18000, priceRange:"10k-30k", image:"https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=800&q=80", description:"Stonewashed Belgian linen, relaxed fit, patch pockets, unlined." },
-  { id:"a5", name:"Bias-Cut Silk Dress", brand:"Lumière Paris", category:"apparel", style:["romantic","bold"], occasion:["special event","date night"], price:145000, priceRange:"80k+", image:"https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80", description:"19mm silk charmeuse, bias construction, adjustable straps, midi length." },
+  { id:"a4", name:"Linen Oversized Blazer", brand:"Studio Neutre", category:"apparel", style:["minimalist"], occasion:["everyday","work"], price:18000, priceRange:"10k-30k", image:imgA4, description:"Stonewashed Belgian linen, relaxed fit, patch pockets, unlined." },
+  { id:"a5", name:"Bias-Cut Silk Dress", brand:"Lumière Paris", category:"apparel", style:["romantic","bold"], occasion:["special event","date night"], price:145000, priceRange:"80k+", image:imgA5, description:"19mm silk charmeuse, bias construction, adjustable straps, midi length." },
   { id:"a6", name:"Wide-Leg Crepe Trousers", brand:"Studio Neutre", category:"apparel", style:["bold","minimalist"], occasion:["work","everyday"], price:26000, priceRange:"10k-30k", image:imgA6, description:"Fluid acetate crepe, high-rise waist, wide-leg silhouette, invisible zip." },
   { id:"a7", name:"Tuxedo Smoking Jacket", brand:"Maison Forêt", category:"apparel", style:["bold","classic"], occasion:["special event"], price:220000, priceRange:"80k+", image:imgA7, description:"Midnight navy wool-silk, satin peak lapels, jetted pockets, full canvas." },
-  { id:"a8", name:"Silk Blouse — Ivory", brand:"Atelier Rue", category:"apparel", style:["romantic","minimalist","classic"], occasion:["work","everyday","date night"], price:38000, priceRange:"30k-80k", image:"https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=800&q=80", description:"16mm habotai silk, relaxed pussy-bow tie, mother-of-pearl buttons." },
-  { id:"a9", name:"Knit Polo Cashmere", brand:"Sartoria Bianco", category:"apparel", style:["classic","minimalist"], occasion:["everyday","work"], price:42000, priceRange:"30k-80k", image:"https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&q=80", description:"2-ply Mongolian cashmere, three-button placket, ribbed cuffs and hem." },
-  { id:"a10", name:"Leather Trench Coat", brand:"Maison Forêt", category:"apparel", style:["bold","classic"], occasion:["everyday","special event"], price:295000, priceRange:"80k+", image:"https://images.unsplash.com/photo-1520975916090-3105956dac38?w=800&q=80", description:"Butter-soft nappa leather, belted silhouette, storm flap, satin lining." },
+  { id:"a8", name:"Silk Blouse — Ivory", brand:"Atelier Rue", category:"apparel", style:["romantic","minimalist","classic"], occasion:["work","everyday","date night"], price:38000, priceRange:"30k-80k", image:imgA8, description:"16mm habotai silk, relaxed pussy-bow tie, mother-of-pearl buttons." },
+  { id:"a9", name:"Knit Polo Cashmere", brand:"Sartoria Bianco", category:"apparel", style:["classic","minimalist"], occasion:["everyday","work"], price:42000, priceRange:"30k-80k", image:imgA9, description:"2-ply Mongolian cashmere, three-button placket, ribbed cuffs and hem." },
+  { id:"a10", name:"Leather Trench Coat", brand:"Maison Forêt", category:"apparel", style:["bold","classic"], occasion:["everyday","special event"], price:295000, priceRange:"80k+", image:imgA10, description:"Butter-soft nappa leather, belted silhouette, storm flap, satin lining." },
   { id:"a11", name:"Pleated Midi Skirt", brand:"Studio Neutre", category:"apparel", style:["romantic","minimalist"], occasion:["everyday","date night"], price:22000, priceRange:"10k-30k", image:imgA11, description:"Permanent-pleated crepe, elasticated waist, falls just below the knee." },
   { id:"a12", name:"Double-Breasted Suit", brand:"Sartoria Bianco", category:"apparel", style:["bold","classic"], occasion:["work","special event"], price:165000, priceRange:"80k+", image:imgA12, description:"Super 120s wool, peak lapels, 6x2 button stance, full brace buttons." },
 ];
