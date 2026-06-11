@@ -41,7 +41,7 @@ export default function ProductCard({ product, source }: { product: Product; sou
         {formatINR(product.price)}
       </div>
       <button
-        onClick={(e) => { e.preventDefault(); addToCart(product, source); }}
+        onClick={(e) => { e.preventDefault(); e.stopPropagation(); addToCart(product, source); }}
         style={{
           marginTop: 12, width: "100%", height: 44,
           background: "var(--black)", color: "#fff",
