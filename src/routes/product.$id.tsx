@@ -39,9 +39,8 @@ function ProductDetail() {
   return (
     <div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
-        <div style={{ aspectRatio: "4/5", overflow: "hidden", background: "#eee" }}>
-          <img src={product.image} alt={product.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-        </div>
+        <ProductGallery image={product.image} name={product.name} />
+
         <div style={{ padding: 48 }}>
           <div style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--gold)" }}>
             {product.category.charAt(0).toUpperCase() + product.category.slice(1)} · {product.brand}
@@ -104,3 +103,40 @@ function ProductDetail() {
     </div>
   );
 }
+
+function ProductGallery({ image, name }: { image: string; name: string }) {
+  const views = [
+    { label: "Front", style: { objectFit: "cover" as const, objectPosition: "center" } },
+    { label: "Detail", style: { objectFit: "cover" as const, objectPosition: "center", transform: "scale(1.6)" } },
+    { label: "Angle", style: { objectFit: "cover" as const, objectPosition: "top", transform: "scale(1.15)" } },
+  ];
+  const [idx, setIdx] = useState(0);
+  const active = views[idx];
+  return (
+    <div style={{ padding: 16 }}>
+      <div style={{ aspectRatio: "4/5", overflow: "hidden", background: "#eee" }}>
+        <img src={image} alt={`${name} — ${active.label}`} style={{ width: "100%", height: "100%", transition: "transform 0.4s ease", ...active.style }} />
+      </div>
+      <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
+        {views.map((v, i) => (
+          <button
+            key={v.label}
+            onClick={() => setIdx(i)}
+            style={{
+              flex: 1, aspectRatio: "1/1", overflow: "hidden", background: "#eee",
+              border: idx === i ? "2px solid var(--gold)" : "1px solid var(--border)",
+              padding: 0, cursor: "pointer",
+            }}
+            aria-label={v.label}
+          >
+            <img src={image} alt="" style={{ width: "100%", height: "100%", ...v.style }} />
+          </button>
+        ))}
+      </div>
+      <div style={{ marginTop: 8, fontFamily: "'Inter', sans-serif", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gray)", textAlign: "center" }}>
+        {active.label} view
+      </div>
+    </div>
+  );
+}
+
