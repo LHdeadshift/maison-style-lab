@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
+import catFragrance from "../assets/cat-fragrance.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/")({
 const categories = [
   { key: "watches", label: "Watches", img: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80" },
   { key: "bags", label: "Bags", img: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80" },
-  { key: "fragrance", label: "Fragrance", img: "https://images.unsplash.com/photo-1541643600914-78b084683702?w=800&q=80" },
+  { key: "fragrance", label: "Fragrance", img: catFragrance },
   { key: "apparel", label: "Apparel", img: "https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=800&q=80" },
 ] as const;
 
