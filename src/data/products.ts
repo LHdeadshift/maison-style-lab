@@ -1,3 +1,12 @@
+import imgW5 from "../assets/p-w5.jpg";
+import imgW6 from "../assets/p-w6.jpg";
+import imgW12 from "../assets/p-w12.jpg";
+import imgA11 from "../assets/p-a11.jpg";
+import imgF1 from "../assets/p-f1.jpg";
+import imgF2 from "../assets/p-f2.jpg";
+import imgF11 from "../assets/p-f11.jpg";
+import imgF12 from "../assets/p-f12.jpg";
+
 export type Product = {
   id: string;
   name: string;
