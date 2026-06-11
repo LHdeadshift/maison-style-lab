@@ -39,9 +39,8 @@ function ProductDetail() {
   return (
     <div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
-        <div style={{ aspectRatio: "4/5", overflow: "hidden", background: "#eee" }}>
-          <img src={product.image} alt={product.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-        </div>
+        <ProductGallery image={product.image} name={product.name} />
+
         <div style={{ padding: 48 }}>
           <div style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--gold)" }}>
             {product.category.charAt(0).toUpperCase() + product.category.slice(1)} · {product.brand}
