@@ -6,7 +6,6 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { CartProvider } from "../context/CartContext";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -27,7 +26,7 @@ function NotFoundComponent() {
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
-  useEffect(() => { reportLovableError(error, { boundary: "tanstack_root_error_component" }); }, [error]);
+  useEffect(() => { console.error("Root Error Boundary caught error:", error); }, [error]);
   return (
     <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "var(--cream)" }}>
       <div style={{ textAlign: "center", padding: 32 }}>
@@ -49,8 +48,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "MAISON — Curated Luxury" },
       { property: "og:description", content: "MAISON is a research-study luxury fashion site testing rule-based personalisation. Watches, bags, fragrance, apparel." },
       { name: "twitter:description", content: "MAISON is a research-study luxury fashion site testing rule-based personalisation. Watches, bags, fragrance, apparel." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5a307356-c0c2-4ffa-b0bf-fd24e2aa659b/id-preview-8ac17a37--9cbf18ff-9ac3-4293-8477-9acded81593a.lovable.app-1781172332155.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5a307356-c0c2-4ffa-b0bf-fd24e2aa659b/id-preview-8ac17a37--9cbf18ff-9ac3-4293-8477-9acded81593a.lovable.app-1781172332155.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:type", content: "website" },
     ],
