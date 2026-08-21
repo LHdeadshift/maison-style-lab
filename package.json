@@ -6,6 +6,9 @@
   "trustedDependencies": [
     "esbuild"
   ],
+  "allowScripts": {
+    "esbuild": true
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
