@@ -63,8 +63,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
   );
 
   const value: CartCtx = {
-    cartItems, addToCart, removeFromCart, updateQuantity,
-    cartCount, cartTotal, isCartOpen, setIsCartOpen, lastAdded, bumpKey,
+    cartItems,
+    addToCart,
+    removeFromCart,
+    updateQuantity,
+    cartCount,
+    cartTotal,
+    isCartOpen,
+    setIsCartOpen,
+    lastAdded,
+    bumpKey,
   };
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

@@ -25,33 +25,66 @@ export default function ProductCard({ product, source }: { product: Product; sou
           src={product.image}
           alt={product.name}
           style={{
-            width: "100%", height: "100%", objectFit: "cover",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
             transform: hover ? "scale(1.06)" : "scale(1)",
             transition: "transform 0.4s ease",
           }}
         />
       </div>
-      <div style={{ marginTop: 12, fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: 11, textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--gray)" }}>
+      <div
+        style={{
+          marginTop: 12,
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: 400,
+          fontSize: 11,
+          textTransform: "uppercase",
+          letterSpacing: "0.12em",
+          color: "var(--gray)",
+        }}
+      >
         {product.brand}
       </div>
-      <div style={{ marginTop: 4, fontFamily: "'Playfair Display', serif", fontSize: 16, color: "var(--black)" }}>
+      <div
+        style={{
+          marginTop: 4,
+          fontFamily: "'Playfair Display', serif",
+          fontSize: 16,
+          color: "var(--black)",
+        }}
+      >
         {product.name}
       </div>
-      <div style={{ marginTop: 6, fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: 15 }}>
+      <div
+        style={{ marginTop: 6, fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: 15 }}
+      >
         {formatINR(product.price)}
       </div>
       <button
-        onClick={(e) => { e.preventDefault(); e.stopPropagation(); addToCart(product, source); }}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          addToCart(product, source);
+        }}
         style={{
-          marginTop: 12, width: "100%", height: 44,
-          background: "var(--black)", color: "#fff",
-          fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: 12,
-          textTransform: "uppercase", letterSpacing: "0.1em",
+          marginTop: 12,
+          width: "100%",
+          height: 44,
+          background: "var(--black)",
+          color: "#fff",
+          fontFamily: "'Inter', sans-serif",
+          fontWeight: 500,
+          fontSize: 12,
+          textTransform: "uppercase",
+          letterSpacing: "0.1em",
           opacity: hover ? 1 : 0,
           transform: hover ? "translateY(0)" : "translateY(8px)",
           transition: "opacity 0.3s ease, transform 0.3s ease",
         }}
-      >Add to Bag</button>
+      >
+        Add to Bag
+      </button>
     </Link>
   );
 }
